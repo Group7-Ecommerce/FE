@@ -3,11 +3,11 @@ import { useState, useMemo, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
 import Homepage from "../pages/Homepage";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
+import Register from "../pages/Auth/Register";
+import Login from "../pages/Auth/Login";
 import Beranda from "../pages/Beranda";
 import DetailProduct from "../pages/DetailProduct";
-import Profil from "../pages/Profil";
+import Profil from "../pages/ProfilUser";
 import Checkout from "../pages/Checkout";
 import Keranjang from "../pages/Keranjang";
 import PesananSaya from "../pages/PesananSaya";

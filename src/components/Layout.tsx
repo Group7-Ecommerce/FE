@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="w-full h-screen flex flex-col overflow-auto">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="h-full w-full bg-base-300 bg-center bg-cover bg-no-repeat flex flex-col">
         {children}
       </div>

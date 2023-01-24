@@ -10,6 +10,6 @@ import ProfilUser from "./pages/ProfilUser";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ProfilUser />
+    <footer />
   </React.StrictMode>
 );

@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { BsPencil } from "react-icons/bs";
 import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 const ProfilUser = () => {
   return (

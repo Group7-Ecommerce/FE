@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+}
 
 body {
   margin: 0;
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+input.input.input-bordered.bg-white.text-black.shadow-sm {
+  border: 1px solid #03ac0e;
 }

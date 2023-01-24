@@ -9,8 +9,6 @@ import ProfilUser from "./pages/ProfilUser";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-
-    <routes />
-
+    <footer />
   </React.StrictMode>
 );

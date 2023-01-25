@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../../components/Button";
 import Layout from "../../components/Layout";
 
-function Register () {
+function Register() {
   return (
     <Layout>
       <div className="w-full h-full flex flex-col items-center justify-center">
@@ -20,7 +20,9 @@ function Register () {
               className="input input-bordered w-full  border-black -mt-5 ring-1 ring-black"
             />
             <label className="label">
-              <span className="label-text text-lg text-black ">Number Phone</span>
+              <span className="label-text text-lg text-black ">
+                Number Phone
+              </span>
             </label>
             <input
               type="text"
@@ -52,18 +54,19 @@ function Register () {
               className="input input-bordered w-full border-black -mt-5 ring-1 ring-black"
             />
             <div className="justify-center text-center mt-9">
-            <Button className="btn w-[28vh] bg-[#03AC0E] " label="LOGIN" />
-            <label className="label-one">
-              <p className="font-normal font-weight-300 text-center mt-3">
-                Already have an Account? <span className="font-bold">Register</span>
-              </p>
-            </label>
+              <Button className="btn w-[28vh] bg-[#03AC0E] " label="LOGIN" />
+              <label className="label-one">
+                <p className="font-normal font-weight-300 text-center mt-3">
+                  Already have an Account?{" "}
+                  <span className="font-bold">Register</span>
+                </p>
+              </label>
             </div>
           </form>
         </div>
       </div>
     </Layout>
   );
-};
+}
 
 export default Register;

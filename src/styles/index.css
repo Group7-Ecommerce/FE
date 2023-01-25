@@ -29,6 +29,16 @@ div.card-body.flex.flex-col.gap-3.justify-between {
 span.text-end {
   position: absolute;
   left: 430px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
+}
+
+p.text-end {
+  position: relative;
+  top: -90px;
+  left: -50px;
+  color: #ee4d2d;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }

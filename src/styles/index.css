@@ -16,3 +16,19 @@ body {
 input.input.input-bordered.bg-white.text-black.shadow-sm {
   border: 1px solid #03ac0e;
 }
+
+div.card-body.flex.flex-col.gap-3.justify-between {
+  position: relative;
+  left: 900px;
+  width: 588px;
+  height: 259px;
+  background: #f2f2f2;
+  border-radius: 14px;
+}
+
+span.text-end {
+  position: absolute;
+  left: 430px;
+  font-family: 'Inter';
+  font-style: normal;
+}

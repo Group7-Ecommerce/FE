@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import DetailProduct from "./pages/DetailProduct";
+import Checkout from "./pages/Checkout";
 
 import App from "./routes";
 import "./styles/index.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <DetailProduct />
+    <Checkout />
   </React.StrictMode>
 );

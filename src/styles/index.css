@@ -16,3 +16,13 @@ body {
 input.input.input-bordered.bg-white.text-black.shadow-sm {
   border: 1px solid #03ac0e;
 }
+
+p.text-end {
+  position: relative;
+  top: -90px;
+  left: -50px;
+  color: #ee4d2d;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}

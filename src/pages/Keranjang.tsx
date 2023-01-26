@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 
 import { AiOutlineLeft } from "react-icons/ai";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const Keranjang = () => {
   return (
@@ -11,9 +12,9 @@ const Keranjang = () => {
         {" "}
         <AiOutlineLeft className="" />{" "}
       </button>
-      <div className="w-full h-full flex flex-col items-center">
+      <div className="w-full h-full flex flex-col items-center bg-base">
         <div className="flex flex-row gap-4 min-w-[70%] mt-10">
-          <div className="card w-full h-[9vh] bg-base-100 shadow-lg">
+          <div className="card w-full h-[9vh] bg-base-100 shadow-lg mt-9">
             <div className="card w-full h-[40vh] bg-base-100 shadow-lg justify-between text-center">
               <div className="card-body flex flex-row">
                 <img
@@ -46,10 +47,12 @@ const Keranjang = () => {
           <p className="text-black text-2xl">
             Harga:{" "}
             <span className="text-[#03AC0E] pr-14 text-2xl">12.000.000</span>
+            <Link to="/checkout">
             <Button
               className="btn w-[18vh] text-white bg-[#03AC0E]"
               label="CheckOut"
             />
+            </Link>
           </p>
         </div>
       </div>

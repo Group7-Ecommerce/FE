@@ -90,6 +90,35 @@ const handleLogout = async () => {
               )}
             </div>
             <div className="px-1 py-1">
+              {checkToken && (
+                <Menu.Item>
+                  {({ active }) => (
+                    <button className={`${
+                      active 
+                      ? "bg-base-300 text-black"
+                      : "text-black"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    id="to-keranjang"
+                    onClick={() => navigate("/keranjang")}
+                    >
+                      {active ? (
+                        <HiOutlineShoppingCart 
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                        />
+                      ) : (
+                        <HiOutlineShoppingCart
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                        />
+                      )}
+                      Cart
+                    </button>
+                  )}
+                </Menu.Item>
+              )}
+            </div>
+            <div className="px-1 py-1">
               <Menu.Item>
                 {({ active }) => (
                   <button

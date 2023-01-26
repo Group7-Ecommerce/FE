@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { BsPencil } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 
@@ -10,9 +11,9 @@ const ProfilUser = () => {
       <div className="w-full h-full flex flex-col items-center justify-center bg-base-200">
         <div className="flex h-full w-full flex-wrap items-center justify-between p-8 -mt-40">
           <div className="card w-2/5 gap-4 p-3 lg:h-2/5 lg:card-side justify-center -mt-44">
-            <div className="card w-96 bg-white">
+            <div className="card w-96 bg-white mt-8">
               <div className="overflow-x-auto w-full">
-                <div className="flex items-center space-x-3 px-5 pt-3">
+                <div className="flex items-center space-x-3 px-5 pt-3 ">
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
@@ -35,12 +36,12 @@ const ProfilUser = () => {
               </div>
               <div className="card-body items-start text-left justify-start">
                 <button className="">Upload Product</button>
-                <button className="">Pesanan saya</button>
+                <Link className="" to="/pesananSaya">Pesanan saya</Link>
               </div>
             </div>
           </div>
 
-          <div className="card-body w-3/5 lg:h-2/5  -mt-60 rounded-lg">
+          <div className="card-body w-3/5 lg:h-2/5  -mt-40 rounded-lg">
             <div className="flex flex-col">
               <div className="card card-side bg-base-100 shadow-xl">
                 <div className="card w-96 bg-base-100">

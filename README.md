@@ -32,7 +32,7 @@
 
 ## 📃About The Project
 
-Socmed APP is a social media website for people to post, edit and delete and share stories and exchange ideas with comments.
+Order product in E-Commerce App website .
 
 
 ### 🛠️Built With

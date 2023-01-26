@@ -151,4 +151,4 @@ npm run dev
 
 - Fikri Amanda:
 
-  [![GitHub](https://img.shields.io/badge/-Inri-black?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/fianda12)
+  [![GitHub](https://img.shields.io/badge/-Fianda-black?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/fianda12)

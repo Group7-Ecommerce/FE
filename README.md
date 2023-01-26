@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/FE11-Group5-socmedAPI-project/FE-SocmedAPP/blob/main/src/assets/Group5.png"alt="Logo">
+<img src="https://github.com/Group7-Ecommerce/FE/blob/main/src/assets/Gorup7.png"alt="Logo">
 
 </div>
 

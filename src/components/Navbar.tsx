@@ -16,7 +16,6 @@ const Navbar = () => {
   const [cookie, , removeCookie] = useCookies(["token"]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [isShowing, setIsShowing] = useState(false)
   const checkToken = cookie.token;
 
 
@@ -53,7 +52,6 @@ const handleLogout = async () => {
           </Menu.Button>
         </div>
         <Transition
-        
         as={Fragment}
         enter="transition ease-out duration-100"
         enterFrom="transform opacity-0 scale-95"

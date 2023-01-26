@@ -1,8 +1,24 @@
-import React from "react";
-import Button from "../components/Button";
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
 import Layout from "../components/Layout";
 
+
+import Belumbayar from "./Modal/belumbayar";
+import Dikemas from "./Modal/Dikemas";
+import Dikirim from "./Modal/Dikirim";
+import Selesai from "./Modal/Selesai";
+import Dibatalkan from "./Modal/Dibatalkan";
+
 const PesananSaya = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
   return (
     <Layout>
       <div className="w-full h-full flex flex-col items-center bg-base-300">
@@ -10,22 +26,28 @@ const PesananSaya = () => {
           <div className="card w-full h-[8vh] bg-base-100 shadow-lg">
             <div className="card-body flex-row justify-between">
               <div>
-              <p className="text-lg hover:text-[#03AC0E]">Semua</p>
+                <button
+                  className="text-lg hover:text-[#03AC0E]"
+                  onClick={openModal}
+                >
+                  Semua
+                </button>
               </div>
               <div>
-              <p className="text-lg hover:text-[#03AC0E]">Belum bayar</p>
+                <Belumbayar/>
               </div>
               <div>
-              <p className="text-lg hover:text-[#03AC0E]">Sedang dikemas</p>
+                <Dikemas/>
+              </div>
+             
+              <div>
+                <Dikirim/>
               </div>
               <div>
-              <p className="text-lg hover:text-[#03AC0E]">Dikirim</p>
+                <Selesai/>
               </div>
               <div>
-              <p className="text-lg hover:text-[#03AC0E]">Selesai</p>
-              </div>
-              <div>
-              <p className="text-lg hover:text-[#03AC0E]">Dibatalkan</p>
+                <Dibatalkan/>
               </div>
             </div>
           </div>

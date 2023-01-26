@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import { useCookies } from "react-cookie";
 
 import { handleAuth } from "../utils/redux/reducers/reducer";
-
 import "../styles/index.css";
 import Layout from "./Layout";
 

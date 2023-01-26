@@ -1,6 +1,6 @@
-export interface ProfileType {
+export interface ProfileUserType {
   email?: string;
   name?: string;
   phone_number?: number;
-  image?: string;
+  qty: number;
 }

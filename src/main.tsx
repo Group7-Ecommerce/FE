@@ -8,7 +8,7 @@ import ProfilUser from "./pages/ProfilUser";
 import Router from "./routes/Router";
 import "./styles/index.css";
 
-import Navbar from "./components/Navbar";
+import Card from "./components/Card";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

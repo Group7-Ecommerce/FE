@@ -1,79 +1,81 @@
-import { useState } from "react";
-import Layout from "../components/Layout";
-import { HomepageType } from "../utils/types/Homepage";
+import withReactContent from "sweetalert2-react-content";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useCookies } from "react-cookie";
+import axios from "axios";
+
 import { SkeletonLoading } from "../components/Loading";
+import { HomepageType } from "../utils/types/Homepage";
+
+import Swal from "../utils/Swal";
+import Layout from "../components/Layout";
 import DetailProduct from "./DetailProduct";
-import CardPost from "../components/CardPost";
+import Card from "../components/Card";
+import Button from "../components/Button";
 
 const Homepage = () => {
+  const [cookie, setCookie] = useCookies(["token"])
+  const dispatch = useDispatch();
+  const MySwal = withReactContent(Swal);
   const [datas, setDatas] = useState<HomepageType[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    fetchData;
+  }, []);
 
   function fetchData() {
-    [
-      {
-        id: 1,
-        title: "Asus 1",
-        price: "Rp12.000.00",
-        qty: "1",
-        image:
-          "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210902103602/P_setting_xxx_0_90_end_185.png?webp",
-        description: "ini laptop asus",
+    axios.get(`http://34.69.18.136/`)
+    .then((res) => {
+      const { data } = res.data;
+      setCookie("token", data.token);
+      setDatas(data); 
+    })
+    .catch((error) => {
+      alert(error.toString());
+    })
+    .finally(() => setLoading(false));
+  }
+
+  function addToCart (_data: HomepageType) {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${cookie.token}`,
       },
-      {
-        id: 2,
-        title: "Asus 2",
-        price: "Rp12.000.00",
-        qty: "1",
-        image:
-          "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210902103602/P_setting_xxx_0_90_end_185.png?webp",
-        description: "ini laptop asus",
-      },
-      {
-        id: 3,
-        title: "Asus 3",
-        price: "Rp12.000.00",
-        qty: "1",
-        image:
-          "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210902103602/P_setting_xxx_0_90_end_185.png?webp",
-        description: "ini laptop asus",
-      },
-      {
-        id: 4,
-        title: "Asus 4",
-        price: "Rp12.000.00",
-        qty: "1",
-        image:
-          "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210902103602/P_setting_xxx_0_90_end_185.png?webp",
-        description: "ini laptop asus",
-      },
-      {
-        id: 5,
-        title: "Asus 5",
-        price: "Rp12.000.00",
-        qty: "1",
-        image:
-          "https://www.asus.com/media/Odin/Websites/global/ProductLine/20210902103602/P_setting_xxx_0_90_end_185.png?webp",
-        description: "ini laptop asus",
-      },
-    ];
+    };
+    axios
+      .post(`http://34.69.18.136/`, {}, config)
+      .then((res) => {
+        console.log("add to cart", res);
+        const { message } = res.data;
+        MySwal.fire({
+          title: "Success Add to Cart",
+          text: message,
+          showConfirmButton: false,
+        });
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
   }
 
   return (
     <Layout>
-      <div className="m-2 grid grid-flow-row auto-rows-max grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-5">
-        {loading
-          ? [...Array(5).keys()].map((data) => <SkeletonLoading key={data} />)
-          : datas.map((data) => (
-              <DetailProduct
-                key={data.id}
-                title={data.title}
-                image={data.image}
-                price={data.price}
-                labelButton="Keranjang"
+      <div className="m-2 grid grid-flow-row auto-rows-max grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-5 mt-32">
+      {loading
+          ? [...Array(5).keys()].map((datas) => <SkeletonLoading key={datas} />)
+          : datas.map((datas) => (
+              <Card
+                key={datas.id}
+                title={datas.title}
+                image={datas.image}
+                price={datas.price}
+                id={datas.id}
+                labelButton="ADD CART"
+                onClickCart={() => addToCart(datas)}
               />
             ))}
-      </div>
+            </div>
     </Layout>
   );
 };

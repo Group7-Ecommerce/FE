@@ -22,7 +22,7 @@ const PesananSaya = () => {
   return (
     <Layout>
       <div className="w-full h-full flex flex-col items-center bg-base-300">
-        <div className="flex-none gap-4 min-w-[70%] mt-11">
+        <div className="flex-none gap-4 min-w-[70%] mt-36">
           <div className="card w-full h-[8vh] bg-base-100 shadow-lg">
             <div className="card-body flex-row justify-between">
               <div>

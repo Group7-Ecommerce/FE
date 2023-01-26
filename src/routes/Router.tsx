@@ -14,7 +14,7 @@ import Checkout from "../pages/Checkout";
 import Keranjang from "../pages/Keranjang";
 import PesananSaya from "../pages/PesananSaya";
 
-axios.defaults.baseURL = "https://app.swaggerhub.com/apis/Grioup7/E-Commerce_API/1.0.0/"
+axios.defaults.baseURL = "http://34.69.18.136/"
 
 function App() {
   const [cookie, , removeCookie] = useCookies(["token"]);

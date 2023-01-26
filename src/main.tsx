@@ -6,7 +6,7 @@ import { store, persistor } from "./utils/redux/store/store";
 import Router from "./routes/Router";
 import "./styles/index.css";
 
-import Navbar from "./components/Navbar";
+import DetailProduct from "./pages/DetailProduct";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

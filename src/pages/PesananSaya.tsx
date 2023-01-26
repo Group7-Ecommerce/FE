@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import Layout from "../components/Layout";
 
 
-import Belumbayar from "./Modal/belumbayar";
+import Belumbayar from "./Modal/Belumbayar";
 import Dikemas from "./Modal/Dikemas";
 import Dikirim from "./Modal/Dikirim";
 import Selesai from "./Modal/Selesai";

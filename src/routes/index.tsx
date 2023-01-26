@@ -74,7 +74,11 @@ function App() {
       path: "/pesananSaya",
       element: checkToken ? <PesananSaya /> : <Navigate to="/profil"/>
     },
-  ])
+  ]);
+
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 

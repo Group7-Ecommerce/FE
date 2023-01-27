@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import { useCookies } from "react-cookie";
 
 import { handleAuth } from "../utils/redux/reducers/reducer";
-import Button from "./Button";
 
 import "../styles/index.css";
 import Layout from "./Layout";
@@ -29,7 +28,7 @@ const handleLogout = async () => {
 
 
   return (
-    <Layout>
+    
     <div className="sticky w-full px-7 py-2.5 flex gap-3">
       <div className="flex">
         <Link className="relative inline-block text-left text-xl mt-3" to="/" id="to-homepage">E-Commerce APP</Link>
@@ -44,9 +43,9 @@ const handleLogout = async () => {
         </div>
         <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75">
             <HiOutlineUser
-              className="ml-2 -mr-1 h-5 w-5 text-violet-200 hover:text-violet-100"
+              className="ml-2 -mr-1 h-5 w-5 text-[#03AC0E] hover:text-green-400"
               aria-hidden="true"
             />
           </Menu.Button>
@@ -105,12 +104,12 @@ const handleLogout = async () => {
                     }
                     >
                       {checkToken ? (
-                        <HiLogout
+                        <HiLogin
                         className="mr-2 h-5 w-5"
                         aria-hidden="true"
                         />
                       ) : (
-                        <HiLogin
+                        <HiLogout
                         className="mr-2 h-5 w-5"
                         aria-hidden="true"
                         />
@@ -125,7 +124,7 @@ const handleLogout = async () => {
         </Menu>
       </div>
     </div>
-    </Layout>
+   
   );
 };
 

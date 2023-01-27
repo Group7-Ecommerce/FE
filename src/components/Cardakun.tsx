@@ -1,6 +1,9 @@
+
+import Layout from "./Layout";
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+
 
 import { FiEdit2 } from "react-icons/fi";
 import { BsTrash } from "react-icons/bs";
@@ -44,7 +47,9 @@ const Cardakun: FC<CardakunProps> = ({
   ...props
 }) => {
   return (
-    <div className="card w-full bg-center justify-between" {...props}>
+    <Layout>
+    <div className="card w-full bg-center justify-between bg-white mt-36" {...props}>
+
       <div className="card-body">
         <h2 className="card-title">Edit Account</h2>
         <div className="flex flex-col mt-8">
@@ -184,6 +189,7 @@ const Cardakun: FC<CardakunProps> = ({
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

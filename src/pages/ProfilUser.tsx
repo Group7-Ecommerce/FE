@@ -1,5 +1,10 @@
 import Layout from "../components/Layout";
 import { BsPencil } from "react-icons/bs";
+
+import { Link } from "react-router-dom";
+import Button from "../components/Button";
+import Footer from "../components/Footer";
+import CardPost from "../components/CardPost";
 import { BsCamera } from "react-icons/bs";
 
 import { useCookies } from "react-cookie";
@@ -24,6 +29,7 @@ interface ProfilUserProps {
   address: string;
   password: string;
 }
+
 
 const ProfilUser = () => {
   // profile
@@ -268,7 +274,7 @@ const ProfilUser = () => {
                         {" "}
                         <BsPencil className="" />{" "}
                       </button>
-                      <button className="">Edit Profile</button>
+                      <Link to="/cardakun" className="">Edit Profile</Link>
                     </span>
                   </div>
                 </div>
@@ -289,7 +295,8 @@ const ProfilUser = () => {
                       {" "}
                       <BsCamera className="" /> Upload Your Product{" "}
                     </button>
-                    {/* <button className="">Upload Your Product</button> */}
+                    <Link to="/cardpost" className="pl-3">Upload Your Product</Link>
+
                   </span>
 
                   <figure>

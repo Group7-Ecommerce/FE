@@ -21,7 +21,7 @@ const DetailProduct = () => {
 
   const fetchData = async () => {
     axios
-      .get(`product/${id_product}`)
+      .get(`http://34.69.18.136/products/${id}`)
       .then((response) => response.data)
       .then((datas) => {
         setDatas(datas);

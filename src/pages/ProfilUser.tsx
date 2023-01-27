@@ -4,6 +4,8 @@ import { BsPencil } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import Cardakun from "../components/Cardakun";
+import CardPost from "../components/CardPost";
 
 const ProfilUser = () => {
   return (
@@ -29,7 +31,7 @@ const ProfilUser = () => {
                         {" "}
                         <BsPencil className="" />{" "}
                       </button>
-                      <button className="">Edit Profile</button>
+                      <Link to="/cardakun" className="">Edit Profile</Link>
                     </span>
                   </div>
                 </div>
@@ -50,7 +52,7 @@ const ProfilUser = () => {
                       {" "}
                       <BsPencil className="" />{" "}
                     </button>
-                    <button className="pl-3">Edit Profile</button>
+                    <Link to="/cardpost" className="pl-3">Edit Products</Link>
                   </span>
 
                   <figure>

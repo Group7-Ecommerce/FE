@@ -1,8 +1,10 @@
 import React from "react";
+import Layout from "./Layout";
 
 const Cardakun = () => {
   return (
-    <div className="card w-full bg-center justify-between">
+    <Layout>
+    <div className="card w-full bg-center justify-between bg-white mt-36">
       <div className="card-body">
         <h2 className="card-title">Edit Account</h2>
         <div className="flex flex-col mt-8">
@@ -43,6 +45,7 @@ const Cardakun = () => {
     </div>
     </div>
     </div>
+    </Layout>
   );
 };
 

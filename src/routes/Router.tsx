@@ -13,6 +13,8 @@ import Profil from "../pages/ProfilUser";
 import Checkout from "../pages/Checkout";
 import Keranjang from "../pages/Keranjang";
 import PesananSaya from "../pages/PesananSaya";
+import Cardakun from "../components/Cardakun";
+import CardPost from "../components/CardPost";
 
 axios.defaults.baseURL = "http://34.69.18.136/"
 
@@ -74,6 +76,14 @@ function App() {
       path: "/pesananSaya",
       element: checkToken ? <PesananSaya /> : <Navigate to="/profil"/>
     },
+    {
+      path: "/cardakun",
+      element: checkToken ? <Cardakun/> : <Navigate to="/profile"/>
+    },
+    {
+      path: "/cardpost",
+      element: checkToken ? <CardPost/> : <Navigate to="/profile"/>
+    }
   ]);
 
   return (

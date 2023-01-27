@@ -8,15 +8,13 @@ import ProfilUser from "./pages/ProfilUser";
 import Router from "./routes/Router";
 import "./styles/index.css";
 
-import DetailProduct from "./pages/DetailProduct";
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <ProfilUser />
+      <Router />
     </PersistGate>
   </Provider>
 );

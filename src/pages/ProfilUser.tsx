@@ -218,7 +218,7 @@ const ProfilUser = () => {
 
   // edit product
 
-  function editPostingan(id: number) {
+  function editPostingan(id: number)  {
     const formData = new FormData();
     if (editPostingan) {
       formData.append("content", editPostingan);
@@ -293,7 +293,7 @@ const ProfilUser = () => {
                   <span className="flex-row px-3 pt-3">
                     <button>
                       {" "}
-                      <BsCamera className="" /> Upload Your Product{" "}
+                      <BsCamera className="" /> {" "}
                     </button>
                     <Link to="/cardpost" className="pl-3">Upload Your Product</Link>
 

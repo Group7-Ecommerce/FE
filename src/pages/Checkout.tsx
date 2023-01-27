@@ -33,7 +33,7 @@ const Checkout = () => {
                 <p className="mt-10">Rp.12.000.000</p>
               </div>
             </div>
-            <div className="card bg-transparent mt-5">
+            <div className="card bg-[#F2F2F2] mt-5">
               <div className="card-body flex flex-col gap-3 justify-between">
                 <p className="text-start">Total Ongkos <span className="text-end">Rp.25.000</span></p>
                 <p className="text-start">Harga Barang <span className="text-end">Rp.12.000.000</span></p>

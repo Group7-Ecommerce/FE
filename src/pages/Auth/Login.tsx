@@ -64,7 +64,7 @@ function Login() {
 
   return (
     <Layout>
-      <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className="w-full h-full flex flex-col items-center justify-center ">
         <div className="card w-1/5 gap-3 p-7 shadow-sm shadow-black lg:h-3/5 bg-white">
           <form
             className="flex flex-col gap-4 min-w-[40%]"
